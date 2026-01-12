@@ -1,0 +1,370 @@
+/**
+ * <pre>
+ * File Name   : attendance-common.css
+ * Description : 근태 도메인 공통 스타일
+ *               - 상단 요약 카드(공통)
+ *               - 탭 영역(표준 디자인)
+ *               - 검색 영역(기간 필터 + 버튼)
+ *               - 테이블/페이지네이션 공통 스타일
+ *
+ * History
+ *   2026/01/06 (이지윤) 근태 공통 레이아웃/스타일 정리 및 표준화
+ * </pre>
+ *
+ * @author 이지윤
+ * @version 1.0
+ */
+
+/* =========================
+   기본 설정
+   ========================= */
+
+* {
+  font-size: 14px;
+  font-family: 'Inter-Regular', sans-serif;
+}
+
+/* 전체 레이아웃: 바깥 레이아웃에서 스크롤 1개만 사용 */
+.attendance-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.attendance-page {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* =========================
+   상단 요약 카드 (공통)
+   ========================= */
+
+.summary-cards {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.summary-card {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  padding: 12px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.summary-title {
+  margin-bottom: 8px;
+  color: #64748b;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.summary-value-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.summary-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172b;
+}
+
+.summary-unit {
+  font-size: 18px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+/* =========================
+   메인 패널
+   ========================= */
+
+.panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+}
+
+/* =========================
+   상단 탭 (표준 디자인)
+   ========================= */
+
+.panel-tabs {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.tab {
+  min-width: 146px;
+  height: auto;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-top: 1px solid #e2e8f0;
+  border-left: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+
+  background-color: #ffffff;
+  color: #62748e;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* 활성 탭 (RouterLink에서 .active 클래스 사용 시) */
+.tab.active {
+  color: #ffffff;
+  font-weight: 700;
+  background: linear-gradient(180deg, #1c398e 0%, #162456 100%);
+}
+
+/* 좌/우 라운드 */
+.tab-start {
+  border-top-left-radius: 14px;
+}
+
+.tab-end {
+  border-top-right-radius: 14px;
+}
+
+/* =========================
+   패널 내부 공통 영역
+   ========================= */
+
+.panel-body {
+  border: 1px solid #e2e8f0;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* =========================
+   검색 영역 (기간 필터 + 버튼)
+   ========================= */
+
+.panel-search {
+  padding: 14px 18px;
+  border: 0;
+  border-bottom: 1px solid #e2e8f0;
+  /* 검색 영역과 테이블 구분선 */
+}
+
+.panel-search-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.search-info {
+  margin: 0;
+  position: relative;
+  top: -8px;
+  font-size: 18px;
+  color: #94a3b8;
+}
+
+/* 기간/필터 그룹 */
+.filter-group {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.filter-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-label {
+  color: #64748b;
+}
+
+.filter-input {
+  width: 220px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 2px solid #cad5e2;
+  background: #ffffff;
+  color: #0f172b;
+}
+
+.filter-input:focus {
+  outline: none;
+}
+
+.filter-separator {
+  color: #64748b;
+}
+
+/* 검색/초기화 버튼 (표준) */
+.search-button-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-search,
+.btn-reset {
+  min-width: 70px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 검색 버튼 (그라데이션 네이비) */
+.btn-search {
+  color: #ffffff;
+  background: linear-gradient(180deg, #1c398e 0%, #162456 100%);
+}
+
+.btn-search:hover {
+  opacity: 0.9;
+  background: linear-gradient(180deg, #1c398e 0%, #162456 100%);
+}
+
+.btn-search:active {
+  opacity: 0.85;
+}
+
+/* 초기화 버튼 (테두리 버튼) */
+.btn-reset {
+  background: #ffffff;
+  border-color: #cad5e2;
+  color: #62748e;
+}
+
+.btn-reset:hover {
+  background: #f8fafc;
+}
+
+/* =========================
+   테이블 공통
+   ========================= */
+
+.panel-table-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 0;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* 헤더 */
+.attendance-table thead tr {
+  background: linear-gradient(180deg, #1c398e 0%, #162456 100%);
+}
+
+.attendance-table th {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: left;
+}
+
+/* 바디 */
+.attendance-table td {
+  padding: 16px;
+  font-size: 14px;
+  color: #62748e;
+  line-height: 1.4;
+  border-top: 0.67px solid #e2e8f0;
+}
+
+/* 표준(흰색 고정): row-striped가 있어도 흰색 유지 */
+.attendance-table tbody tr {
+  background: #ffffff;
+}
+
+.attendance-table tbody tr.row-striped {
+  background: #ffffff;
+}
+
+/* =========================
+   페이지네이션 (표준)
+   ========================= */
+
+.pagination {
+  width: 100%;
+  padding: 16px 0;
+  border-top: 1px solid #e2e8f0;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  background: #ffffff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.page-button {
+  min-width: 34px;
+  height: 29px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 0.67px solid #cad5e2;
+  background: #ffffff;
+  font-size: 14px;
+  color: #62748e;
+  cursor: pointer;
+}
+
+/* 활성 페이지 + disabled 일 때도 opacity 유지 */
+.page-button.page-active:disabled {
+  opacity: 1;
+}
+
+/* 비활성 페이지 버튼 */
+.page-button:disabled:not(.page-active) {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* 활성 페이지 버튼 스타일 */
+.page-active {
+  background: #155dfc;
+  border-color: #155dfc;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* 활성 버튼 hover (표준: 검색 버튼과 동일 계열) */
+.page-button.page-active:disabled:hover {
+  background: #2b6bff;
+  border-color: #2b6bff;
+}
+
+.arrow-button {
+  min-width: 34px;
+}
+
+td.empty-row {
+  text-align: center;
+}

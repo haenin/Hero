@@ -1,0 +1,97 @@
+/**
+ * <pre>
+ * File Name   : attendance-personal.css
+ * Description : 개인 근태 이력(Personal Attendance) 전용 스타일
+ *               - 시간/근무시간 컬럼 중앙 정렬
+ *               - 상태 뱃지 색상/레이아웃
+ *               - 결재양식 작성 링크/액션 버튼 스타일
+ *
+ * History
+ *   2026/01/06 (이지윤) 개인 근태 이력 전용 스타일 최초 작성
+ * </pre>
+ *
+ * @author 이지윤
+ * @version 1.0
+ */
+
+/* =========================================================
+   개인 근태 테이블: 시간/근무시간 컬럼 정렬
+   - 공통(attendance-common.css)의 테이블 기본 스타일 확장
+   ========================================================= */
+
+.attendance-table th.col-time,
+.attendance-table th.col-personal,
+.attendance-table td.time-cell,
+.attendance-table td.duration-cell {
+  text-align: center;
+}
+
+/* 근무시간 컬럼 너비 고정 */
+.attendance-table th:nth-child(5),
+.attendance-table td:nth-child(5) {
+  width: 110px;
+}
+
+/* =========================================================
+   상태 뱃지(정상/지각/결근/조퇴)
+   - 배경은 연하게, 텍스트는 표준 포인트 컬러 사용
+   ========================================================= */
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  min-width: 70px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* 정상 */
+.status-normal {
+  background-color: #d1fae5;
+  color: #0D542B; /* t-green */
+}
+
+/* 지각 */
+.status-late {
+  background-color: #dbeafe;
+  color: #1C398E; /* t-blue */
+}
+
+/* 결근 */
+.status-absent {
+  background-color: #fee2e2;
+  color: #82181A; /* t-red */
+}
+
+/* 조퇴 */
+.status-early {
+  background-color: #fef3c7;
+  color: #7E2A0C; /* t-orange */
+}
+
+/* =========================================================
+   결재양식 작성 링크 / 액션 버튼 영역
+   ========================================================= */
+
+.link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #1C398E;
+  cursor: pointer;
+  text-align: left;
+}
+
+.action-button-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.action-divider {
+  color: #94a3b8;
+}

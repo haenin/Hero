@@ -1,0 +1,137 @@
+/**
+ * <pre>
+ * File Name   : attendance-dept-status.css
+ * Description : 부서 근태 현황(WorkSystemStatus.vue) 전용 스타일
+ *               - 화면 레이아웃(wrapper)
+ *               - 테이블 레이아웃 및 컬럼 폭/정렬
+ *               - 빈 데이터/줄무늬 행 스타일
+ *
+ * History
+ *   2026/01/06 (이지윤) 부서 근태 현황 스타일 최초 작성
+ * </pre>
+ *
+ * @author 이지윤
+ * @version 1.0
+ */
+
+/* =========================
+   레이아웃 (WorkSystemStatus 전용)
+   ========================= */
+
+.worksystem-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.worksystem-page {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* =========================
+   테이블 래퍼 / 기본
+   ========================= */
+
+.panel-table-wrapper {
+  padding: 0 0 16px;
+}
+
+.panel-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* 헤더 셀 공통 정렬 */
+.employee-table th {
+  text-align: center;
+}
+
+/* =========================
+   컬럼 폭 / 헤더 정렬
+   ========================= */
+
+.employee-table th.col-date {
+  width: 10%;
+  text-align: left;
+}
+
+.employee-table th.col-name {
+  width: 18%;
+  text-align: left;
+}
+
+.employee-table th.col-status {
+  width: 14%;
+  text-align: center;
+}
+
+.employee-table th.col-position {
+  width: 14%;
+  text-align: left;
+}
+
+.employee-table th.col-worksystem {
+  width: 16%;
+  text-align: left;
+}
+
+.employee-table th.col-worktime {
+  width: 25%;
+  text-align: left;
+}
+
+/* =========================
+   바디 셀 정렬
+   ========================= */
+
+.employee-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.employee-table td.cell-date {
+  text-align: left;
+}
+
+.employee-table td.cell-name,
+.employee-table td.cell-position,
+.employee-table td.cell-worksystem,
+.employee-table td.cell-worktime {
+  text-align: left;
+}
+
+/* 상태 셀 padding 보정 (뱃지 수직 가운데 정렬 느낌) */
+.employee-table td.cell-status {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* =========================
+   줄무늬 행 / 빈 데이터 / 마지막 행 보더
+   ========================= */
+
+/* 줄무늬 행 (공통 row-striped가 없을 경우를 대비해 유지) */
+.employee-table tbody tr.row-striped {
+  background: #f8fafc;
+}
+
+/* 데이터 없을 때 */
+.empty-row {
+  text-align: center;
+  padding: 24px 0;
+  color: #94a3b8;
+}
+
+/* 마지막 행 하단 보더 */
+.employee-table tbody tr:last-child td {
+  border-bottom: 1px solid #e2e8f0;
+}

@@ -1,0 +1,45 @@
+/**
+ * <pre>
+ * File Name   : attendance-overtime.css
+ * Description : 초과 근무 이력(Overtime) 전용 스타일
+ *               - 시간/초과근무 컬럼 정렬
+ *               - 초과 근무 시간 색상 강조
+ *               - 사유 컬럼 정렬
+ *
+ * History
+ *   2026/01/06 (이지윤) 초과 근무 이력 전용 스타일 최초 작성
+ * </pre>
+ *
+ * @author 이지윤
+ * @version 1.0
+ */
+
+/* =========================
+   헤더/바디 정렬
+   ========================= */
+
+.attendance-table th.col-time,
+.attendance-table th.col-overtime {
+  text-align: center;
+}
+
+.attendance-table td.time-cell,
+.attendance-table td.overtime-time {
+  text-align: center;
+}
+
+/* =========================
+   초과 근무 시간 강조
+   ========================= */
+
+.attendance-table td.overtime-time {
+  color: #82181A;
+}
+
+/* =========================
+   사유 컬럼 정렬
+   ========================= */
+
+.attendance-table td.reason-cell {
+  text-align: left;
+}

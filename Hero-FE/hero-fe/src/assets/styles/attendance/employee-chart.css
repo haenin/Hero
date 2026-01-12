@@ -1,0 +1,264 @@
+/**
+ * File Name   : attendance-employee-half-drawer.css
+ * Description : 직원 반기 근태 상세 Drawer 스타일
+ *               - Drawer 레이아웃 및 헤더
+ *               - 필터 영역(연도/반기)
+ *               - 반기 대시보드 카드 + 요약 + 차트
+ *               - 범례/아이콘 등 디테일 스타일
+ *
+ * History
+ *   2026/01/06 (이지윤) 직원 반기 근태 Drawer 스타일 최초 작성
+ */
+
+/* ===== Drawer 레이아웃 ===== */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 9999;
+}
+
+.drawer-panel {
+  width: 480px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 닫기 버튼 */
+.btn-close {
+  padding: 6px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* 상단 타이틀 (뒤로가기 아이콘 포함) */
+.drawer-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-icon {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ===== 직원 기본 정보 헤더 ===== */
+.employee-head {
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.employee-name {
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.employee-meta {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.employee-meta .dot {
+  margin: 0 6px;
+}
+
+/* ===== 필터 영역(연도/반기) ===== */
+.filters {
+  display: flex;
+  gap: 12px;
+}
+
+.filter-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-label {
+  font-size: 12px;
+  color: #374151;
+}
+
+.filter-select {
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+/* ===== 반기 대시보드 카드 ===== */
+.half-dashboard-card {
+  width: 100%;
+  padding: 16px;
+  overflow: auto;
+  background: #ffffff;
+  border-radius: 11.25px;
+  outline: 1.2px solid #e2e8f0;
+  outline-offset: -1.2px;
+  box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* 카드 헤더 (아이콘 + 타이틀) */
+.half-dashboard-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.half-dashboard-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #1c398e 0%, #162456 100%);
+}
+
+.half-dashboard-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.half-dashboard-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #1c398e;
+}
+
+.half-dashboard-subtitle {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19.5px;
+  color: #62748e;
+}
+
+/* 로딩 / 에러 상태 영역 */
+.state-box {
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px dashed #d1d5db;
+  color: #374151;
+}
+
+.state-box.error {
+  border-color: #ef4444;
+  color: #b91c1c;
+}
+
+/* ===== 반기 요약 카드 3개 ===== */
+.half-dashboard-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.summary-mini-card {
+  padding: 12px 14px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 10px;
+  outline: 1.2px solid #e2e8f0;
+  outline-offset: -1.2px;
+}
+
+.summary-mini-label {
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #64748b;
+}
+
+.summary-mini-value {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #64748b;
+}
+
+/* ===== 차트 공통 ===== */
+.chart-block {
+  margin-top: 16px;
+}
+
+.chart-block-title {
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22.5px;
+  color: #1c398e;
+}
+
+.chart-canvas-wrap {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.chart-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.axis-text {
+  font-size: 12px;
+  font-weight: 400;
+  fill: #64748b;
+}
+
+/* ===== 차트 범례 ===== */
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 19.5px;
+}
+
+.legend-line {
+  width: 14px;
+  height: 0;
+  border-top: 2px solid currentColor;
+}
+
+.legend-absence {
+  color: #ef4444;
+}
+
+.legend-tardy {
+  color: #eab308;
+}

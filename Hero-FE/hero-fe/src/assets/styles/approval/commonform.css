@@ -1,0 +1,907 @@
+/* -----------------------------------------------------------
+    1. GLOBAL LAYOUT & RESET
+   ----------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+.form-wrapper {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.paper-sheet {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.paper-padding {
+  padding: 36px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  width: 100%;
+}
+
+.paper-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+/* -----------------------------------------------------------
+    2. TYPOGRAPHY & COMMON UTILS
+   ----------------------------------------------------------- */
+.label-text,
+.value-text,
+.stamp-role-label,
+.approver-name,
+.approver-rank,
+.input-text,
+.placeholder-text {
+  font-family: "Inter-Regular", sans-serif;
+  font-weight: 400;
+}
+
+.label-text {
+  color: #45556c;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.value-text,
+.approver-name,
+.input-text {
+  color: #0f172b;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.placeholder-text {
+  color: #90a1b9;
+  font-size: 16px;
+}
+
+/* -----------------------------------------------------------
+    3. TITLE SECTION
+   ----------------------------------------------------------- */
+.title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.title-row {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-title {
+  color: #0f172b;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.4px;
+  margin: 0;
+}
+
+/* -----------------------------------------------------------
+   4. TOP SECTION (INFO & STAMPS)
+   ----------------------------------------------------------- */
+.top-section {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Info Table */
+.info-table {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1;
+  min-width: 300px;
+}
+
+.info-table .label-text,
+.info-table .value-text {
+  white-space: nowrap;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.info-row.last-row {
+  border-bottom: none;
+}
+
+.th-cell {
+  background: #f8fafc;
+  border-right: 1px solid #e2e8f0;
+  padding: 10px 18px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.td-cell {
+  padding: 10px 18px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Stamp Area */
+.stamp-area {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  min-width: 320px;
+}
+
+.stamp-group {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: none;
+}
+
+.stamp-box {
+  /* width: 160px !important; */
+  flex: 1;
+  min-width: 130px !important;
+  /* max-width: 150px !important; */
+  height: 190px;
+  flex: display !important;
+  border: 0.67px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.stamp-header {
+  background: #f8fafc;
+  width: 100%;
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.stamp-role-label {
+  color: #90a1b9;
+  font-size: 12px;
+}
+
+.stamp-body {
+  padding: 5px 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  height: 100px !important;
+  min-height: 100px !important;
+  justify-content: center;
+  width: 100%;
+}
+
+.approver-info-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  width: 100%;
+}
+
+.approver-name-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.approver-name {
+  color: #0f172b;
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.approver-rank {
+  color: #62748e;
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.approver-dept {
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.3;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.approver-info {
+  display: flex;
+  gap: 10px;
+}
+
+.approver-rank {
+  color: #62748e;
+  font-size: 12px;
+}
+
+.stamp-signature {
+  width: 45px !important;
+  height: 45px !important;
+  min-width: 45px !important;
+  min-height: 45px !important;
+  max-width: 45px !important;
+  max-height: 45px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.stamp-signature.approved {
+  border: 2px solid #fb2c36;
+}
+
+.stamp-signature.pending {
+  border: 2px solid #cad5e2;
+  border-radius: 50% !important;
+}
+
+.signature-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-approved {
+  color: #e7000b;
+  font-size: 12px;
+}
+
+.status-pending {
+  color: #90a1b9;
+  font-size: 12px;
+}
+
+.approver-name.empty {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.stamp-signature.empty {
+  background-color: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  border-radius: 50%;
+}
+
+.status-empty {
+  color: #cbd5e1;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.stamp-footer {
+  background: #f8fafc;
+  width: 100%;
+  padding: 7px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.stamp-date {
+  color: #90a1b9;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+
+
+/* ========================================
+   이름/직책 가로 배치, 부서 세로 배치
+   ======================================== */
+
+
+/* ========================================
+   도장(원) 크기 고정
+   ======================================== */
+
+
+
+
+/* ========================================
+   미지정 상태 스타일
+   ======================================== */
+
+
+
+
+/* -----------------------------------------------------------
+    5. MAIN FORM SECTION (공통 입력 영역)
+   ----------------------------------------------------------- */
+.form-section {
+  border-radius: 14px;
+}
+
+.main-form-section {
+  border: 1px solid #e2e8f0;
+  border-bottom: none;
+  border-radius: 14px 14px 0 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-row {
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.row-label-top {
+  background: #f8fafc;
+  border-right: 1px solid #e2e8f0;
+  border-top-left-radius: 14px;
+  padding: 16px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.row-label {
+  background: #f8fafc;
+  border-right: 1px solid #e2e8f0;
+  padding: 16px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.row-content {
+  padding: 16px 20px;
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper {
+  height: 46px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  width: 100%;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 14px;
+  color: #0f172b;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-wrapper:focus {
+  border-color: #cbd5e1;
+}
+
+.input-wrapper::placeholder {
+  color: #94a3b8;
+}
+
+.input-text {
+  font-size: 16px;
+}
+
+/* Approval Flow */
+.flow-content {
+  gap: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.approval-flow {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  align-items: stretch;
+  width: 100%;
+}
+
+.flow-card {
+  border: 0.7px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px;
+  width: 160px;
+  min-height: 80px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.card-inner {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.avatar-circle {
+  width: 26px;
+  height: 26px;
+  background: #1c398e;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.avatar-text {
+  color: #fff;
+  font-size: 13px;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  overflow: hidden;
+}
+
+.detail-row {
+  display: flex;
+  font-size: 10px;
+  color: #62748e;
+  white-space: nowrap;
+}
+
+.detail-name {
+  color: #0f172b;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 1px;
+}
+
+.detail-dept {
+  color: #62748e;
+  font-size: 10px;
+}
+
+.detail-role {
+  color: #62748e;
+  font-size: 10px;
+}
+
+.detail-time {
+  color: #90a1b9;
+  font-size: 9px;
+}
+
+.btn-delete {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.flow-arrow {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.flow-card .add-card {
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 110px;
+  width: 20px;
+}
+
+.add-card:hover {
+  background-color: #f8fafc;
+}
+
+.add-icon {
+  font-size: 24px;
+  color: #62748e;
+  line-height: 1;
+}
+
+/* File Upload */
+.file-content {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.file-upload-box {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.file-upload-box:hover {
+  background-color: #f8fafc;
+}
+
+.hidden-file-input {
+  display: none;
+}
+
+.icon-upload {
+  width: 16px;
+  height: 16px;
+}
+
+.upload-label {
+  color: #62748e;
+  font-size: 14px;
+}
+
+.upload-text-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.desc-text {
+  color: #90a1b9;
+  font-size: 12px;
+}
+
+.file-desc {
+  display: flex;
+  align-items: center;
+}
+
+/* Reference */
+.reference-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+/* 칩 목록 컨테이너 */
+.ref-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+/* 개별 참조자 칩 디자인 */
+.ref-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f1f5f9;
+  /* 연한 회색 배경 */
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  /* 둥근 모서리 */
+  padding: 6px 12px;
+  transition: all 0.2s;
+}
+
+.ref-chip:hover {
+  background-color: #e2e8f0;
+}
+
+.ref-name {
+  font-size: 13px;
+  color: #334155;
+  font-weight: 500;
+}
+
+
+.btn-ref-delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+.btn-ref-delete:hover {
+  opacity: 1;
+  background-color: #cbd5e1;
+}
+
+.btn-add-ref {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: #fff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  cursor: pointer;
+  width: fit-content;
+  transition: all 0.2s;
+}
+
+.btn-add-ref:hover {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.btn-text-sm {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.ref-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+}
+
+.ref-input-area {
+  flex: 1;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 41px;
+}
+
+.ref-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn-ref-add {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 8px 5px;
+  background: #fff;
+  cursor: pointer;
+  min-width: 95px;
+  transition: all 0.2s;
+}
+
+.btn-text-sm {
+  font-size: 14px;
+}
+
+/* -----------------------------------------------------------
+   6. BUTTONS (하단 버튼)
+   ----------------------------------------------------------- */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 20px;
+}
+
+.btn-secondary {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 8px 14px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #f8fafc;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, #1c398e 0%, #162456 100%);
+  border: none;
+  border-radius: 10px;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-text {
+  color: #62748e;
+  font-size: 16px;
+}
+
+.btn-text-white {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.file-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+
+.upload-left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.uploaded-file-list {
+  flex-grow: 1;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  padding: 8px;
+  max-height: 72px;
+  overflow-y: auto;
+}
+
+.uploaded-file-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.uploaded-file-list::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 3px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.file-item:last-child {
+  margin-bottom: 0;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.icon-clip {
+  width: 14px;
+  height: 14px;
+  opacity: 0.6;
+}
+
+.file-name {
+  color: #334155;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: fit-content;
+  max-width: 400px;
+}
+
+.file-size {
+  color: #94a3b8;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.btn-remove-file {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.btn-remove-file:hover {
+  opacity: 1;
+}
+
+.hidden-file-input {
+  display: none;
+}

@@ -1,0 +1,76 @@
+name: Deploy to AWS Elastic Beanstalk
+
+permissions:
+  contents: read
+  pull-requests: write
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+          run:
+            working-directory: ./hero-fe
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+
+    - name: Get current time
+      uses: 1466587594/get-current-time@v2
+      id: current-time # 이 ID가 아래 version_label의 steps.current-time과 연결됩니다.
+      with:
+        format: YYYY-MM-DDTHH-mm-ss
+        utcOffset: "+09:00"
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build project
+      run: npm run build
+      env:
+        VITE_API_URL: ${{ secrets.VITE_API_URL }}
+
+    - name: Install AWS CLI
+      run: |
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+        unzip awscliv2.zip
+        sudo ./aws/install --update
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ap-northeast-2
+
+    - name: Generate deployment package
+      run: |
+        mkdir -p deploy
+        cp -r dist deploy/  # dist 디렉토리를 포함
+        cp package.json deploy/
+        cp server.js deploy/ 
+        cp Procfile deploy/Procfile
+        cd deploy && zip -r deploy.zip .
+
+    - name: Beanstalk Deploy
+      uses: einaregilsson/beanstalk-deploy@v22
+      with:
+        aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        application_name: Hero-hrsystem-front
+        environment_name: Hero-hrsystem-front-env
+        # version_label에 시간을 포함하여 중복을 방지합니다.
+        version_label: "deploy-${{ steps.current-time.outputs.formattedTime }}"
+        region: ap-northeast-2
+        deployment_package: hero-fe/deploy/deploy.zip

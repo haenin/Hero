@@ -1,0 +1,145 @@
+.formtpl-container {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.formtpl-page {
+  padding: 24px 32px;
+  box-sizing: border-box;
+}
+
+.formtpl-panel {
+  max-width: 1080px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+.formtpl-search-bar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  top: 0;
+  background: #ffffff;
+  padding-bottom: 8px;
+}
+
+.formtpl-search-input {
+  flex: 1;
+  height: 44px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0 14px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.formtpl-search-input:focus {
+  border-color: #cbd5e1;
+}
+
+.formtpl-search-button {
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: linear-gradient(180deg, #1c398e 0%, #162456 100%);
+  color: #ffff;
+  cursor: pointer;
+}
+
+.formtpl-search-button:hover {
+  opacity: 0.9;
+}
+
+.formtpl-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formtpl-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.formtpl-section-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172b;
+}
+
+.formtpl-section-count {
+  color: #90a1b9;
+  font-size: 14px;
+}
+
+.formtpl-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formtpl-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease;
+}
+
+.formtpl-card.is-favorite .formtpl-action {
+  color: #f0b400;
+}
+
+.formtpl-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.formtpl-meta {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 16px;
+}
+
+.formtpl-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #eff6ff;
+  align-content: center;
+}
+
+.formtpl-name {
+  font-size: 16px;
+  color: #0F172B !important;
+  font-weight: 600;
+  text-align: left;
+}
+
+.formtpl-category {
+  font-size: 14px;
+  color: #62748e;
+  text-align: left;
+}
+
+.formtpl-action {
+  font-size: 16px;
+  color: #62748e;
+}

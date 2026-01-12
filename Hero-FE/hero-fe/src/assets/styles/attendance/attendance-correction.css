@@ -1,0 +1,73 @@
+/**
+ * <pre>
+ * File Name   : attendance-correction.css
+ * Description : 근태 수정 이력(Correction) 전용 스타일
+ *               - 수정 이력 테이블 레이아웃 고정 및 컬럼 폭/정렬
+ *               - 시간 셀(수정 전/후) 정렬 및 숫자 폭 균일 처리
+ *               - 수정 후 시간 강조 색상 지정
+ *
+ * History
+ *   2026/01/06 (이지윤) Correction 전용 스타일 분리 및 정리
+ * </pre>
+ *
+ * @author 이지윤
+ * @version 1.0
+ */
+
+/* =========================
+   테이블 레이아웃
+   ========================= */
+
+/* 수정 이력은 컬럼이 많아 고정 레이아웃 + 폭 지정 필요 */
+.attendance-table {
+  table-layout: fixed;
+}
+
+/* =========================
+   컬럼 폭 / 정렬
+   ========================= */
+
+/* 1열: 날짜 */
+.attendance-table th:nth-child(1),
+.attendance-table td:nth-child(1) {
+  width: 16%;
+}
+
+/* 2~5열: 시간(수정 전/후 출근/퇴근) - 중앙 정렬 + nowrap */
+.attendance-table th:nth-child(2),
+.attendance-table td:nth-child(2),
+.attendance-table th:nth-child(3),
+.attendance-table td:nth-child(3),
+.attendance-table th:nth-child(4),
+.attendance-table td:nth-child(4),
+.attendance-table th:nth-child(5),
+.attendance-table td:nth-child(5) {
+  width: 17%;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* 6열: 사유 - 왼쪽 정렬 + 줄바꿈 허용 */
+.attendance-table th:nth-child(6),
+.attendance-table td:nth-child(6) {
+  width: 16%;
+  text-align: left;
+  word-break: break-word;
+}
+
+/* =========================
+   시간 셀 / 강조
+   ========================= */
+
+/* 시간 칸 정렬 (숫자 폭 균일) */
+.attendance-table td.time-cell {
+  text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 수정 후 시간 강조 색상 */
+.attendance-table td.changed-time {
+  color: #82181a;
+}

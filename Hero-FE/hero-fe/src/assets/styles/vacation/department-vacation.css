@@ -1,0 +1,270 @@
+/**
+ * <pre>
+ * File Name   : department-vacation.css
+ * Description : 부서 휴가 캘린더(Department Vacation Calendar) 전용 스타일
+ *               - 부서 휴가 캘린더 레이아웃
+ *               - 월 전환 네비게이션
+ *               - 요일/캘린더 그리드
+ *               - 본인/팀원 휴가 바 표시 및 범례
+ *
+ * History
+ *   2026/01/06 (이지윤) 부서 휴가 캘린더 전용 스타일 최초 작성
+ * </pre>
+ *
+ * @author 이지윤
+ * @version 1.0
+ */
+
+/* =========================================================
+   기본 폰트 설정
+   ========================================================= */
+* {
+  font-size: 14px;
+  font-family: "Inter-Regular", sans-serif;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   전체 레이아웃
+   ========================================================= */
+
+.dept-vacation-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 80px);
+}
+
+.dept-vacation-page {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.dept-vacation-panel {
+  background: #ffffff;
+  border-radius: 14px;
+  outline: 2px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* =========================================================
+   패널 헤더 (제목 + 월 이동)
+   ========================================================= */
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 19px 25px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.panel-title {
+  font-size: 18px;
+  color: #1a1f36;
+}
+
+.month-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.month-label {
+  font-size: 16px;
+  color: #101828;
+}
+
+.month-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  background: #f1f5f9;
+  cursor: pointer;
+}
+
+/* =========================================================
+   캘린더 컨테이너
+   ========================================================= */
+
+.calendar-container {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 요일 헤더 */
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 8px;
+}
+
+.weekday {
+  font-size: 14px;
+  text-align: center;
+  color: #6a7282;
+  font-weight: 600;
+}
+
+/* 날짜 그리드 전체 */
+
+.calendar-grid {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #f3f4f6;
+  border-left: 1px solid #f3f4f6;
+}
+
+/* 한 주(week) 행
+   - min-height 기반으로 기본 높이 확보 (필요 시 콘텐츠에 따라 증가) */
+
+.calendar-row {
+  position: relative;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 배경 레이어: 칸 구분선 */
+
+.cell-background-layer {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  pointer-events: none;
+}
+
+/* 개별 날짜 셀 */
+
+.calendar-cell {
+  border-right: 1px solid #f3f4f6;
+  border-bottom: 1px solid #f3f4f6;
+  padding: 8px;
+}
+
+.calendar-cell--other {
+  background: #f9fafb;
+  color: #9ca3af;
+}
+
+.calendar-cell--today {
+  background-color: rgba(28, 57, 142, 0.02);
+}
+
+.calendar-cell--today .cell-date span {
+  color: #1c398e;
+  font-weight: 800;
+  border-bottom: 2px solid #1c398e;
+}
+
+/* 날짜 숫자 영역 */
+
+.cell-date {
+  height: 20px;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 10;
+}
+
+/* =========================================================
+   이벤트 렌더링 레이어
+   - grid-auto-rows로 바 높이/간격 자동 조절
+   ========================================================= */
+
+.event-render-layer {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 26px; /* 바 높이 + 세로 간격 */
+  gap: 4px 0;
+  padding: 28px 2px 4px 2px; /* 상단 날짜 숫자 영역(28px) 확보 */
+  flex: 1;
+}
+
+/* 휴가 바(본인/팀원) */
+
+.vacation-tag-bar {
+  z-index: 5;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0 10px; /* 칸 경계선 침범 방지 */
+}
+
+/* 본인 휴가 */
+
+.vacation-tag--self {
+  background: #1c398e;
+  box-shadow: 0 2px 4px rgba(28, 57, 142, 0.2);
+}
+
+/* 팀원 휴가 */
+
+.vacation-tag--team {
+  background: #94a3b8;
+}
+
+/* =========================================================
+   범례(본인/팀원 구분)
+   ========================================================= */
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 12px;
+  padding: 0 4px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+}
+
+.legend-color--self {
+  background: #1c398e;
+}
+
+.legend-color--team {
+  background: #94a3b8;
+}
+
+/* =========================================================
+   부가 텍스트 스타일
+   ========================================================= */
+
+.dept-name {
+  font-weight: 700;
+  color: #1c398e;
+  font-size: 16px;
+}
+
+.name {
+  font-size: 16px;
+}

@@ -1,0 +1,295 @@
+* {
+    font-size: 14px;
+    font-family: "Inter-Regular", sans-serif;
+}
+
+.inbox-container {
+    padding: 20px;
+    overflow: auto;
+}
+
+.inbox-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.inbox-header {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.inbox-tabs {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.tab {
+    padding: 10px;
+    width: 95px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #e2e8f0;
+    border-left: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    background-color: #ffff;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab:hover {
+    background-color: #f8fafc;
+}
+
+.tab.active {
+    color: #ffff;
+    background: linear-gradient(180deg, #1c398e 0%, #162456 100%);
+    transition: opacity 0.2s;
+}
+
+.tab.active:hover {
+    opacity: 0.9;
+}
+
+.tab-start {
+    border-top-left-radius: 14px;
+}
+
+.tab-end {
+    border-top-right-radius: 14px;
+}
+
+.inbox-body {
+    background-color: #ffff;
+    border: 1px solid #e2e8f0;
+    border-top-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+
+.inbox-body-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.top-first-button {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(180deg, #1C398E 0%, #162456 100%);
+    border-radius: 10px;
+}
+
+.top-first-button:hover {
+    opacity: 0.9;
+}
+
+.newdoc-button {
+    color: #ffff;
+}
+
+.top-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.top-second {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-third {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.input-box {
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 15px;
+    display: flex;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-box:focus {
+    border-color: #cbd5e1;
+}
+
+
+.calendar {
+    height: 100%;
+}
+
+.search-button {
+    color: #ffff;
+    padding: 10px 18px 10px 18px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #1C398E 0%, #162456 100%);
+    transition: opacity 0.2s;
+}
+
+.search-button:hover {
+    opacity: 0.9;
+}
+
+.inbox-body-table {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+thead {
+    color: #ffff;
+    background: linear-gradient(180deg, #1C398E 0%, #162456 100%);
+}
+
+th {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e2e8f0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cell {
+    text-align: left;
+}
+
+.docNo {
+    width: 200px;
+}
+
+.docNo.doc-rejected {
+    color: #62748E;
+}
+
+.docStatus {
+    width: 150px;
+}
+
+.docCategory {
+    width: 120px;
+}
+
+.docName {
+    width: 160px;
+}
+
+.docTitle {
+    min-width: 200px;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.drafterDept {
+    width: 120px;
+}
+
+.drafter {
+    width: 120px;
+}
+
+.drafterDate {
+    width: 190px;
+}
+
+.status-badge {
+    display: inline-flex;
+    padding: 4px 12px;
+    min-width: 70px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.status-inprogress {
+    background-color: #dbeafe;
+    color: #1C398E !important;
+}
+
+.status-approved {
+    background-color: #d1fae5;
+    color: #0D542B !important;
+}
+
+.status-rejected {
+    background-color: #fee2e2;
+    color: #82181A !important;
+}
+
+.inbox-body-bottom {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row
+}
+
+.inbox-body-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.inbox-button {
+    padding: 5px 12px;
+    border-radius: 4px;
+    border: 1px solid #CAD5E2;
+    color: #62748E;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.inbox-button:hover {
+    background-color: #f8fafc !important;
+}
+
+.button-page.active {
+    background: #155DFC;
+    border: none;
+    color: #fff;
+}
+
+.clickable-row {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.clickable-row:hover {
+    background-color: #f8fafc;
+}

@@ -1,0 +1,105 @@
+/**
+ * <pre>
+ * File Name   : vacation-history.css
+ * Description : 휴가 이력(VacationHistory) 화면 전용 스타일
+ *               - 휴가 이력 테이블 컬럼 폭 및 정렬
+ *               - 휴가 종류 / 승인 현황 Pill 스타일
+ *
+ * History
+ *   2026/01/06 (이지윤) 휴가 이력 전용 스타일 최초 작성
+ * </pre>
+ *
+ * @author 이지윤
+ * @version 1.0
+ */
+
+/* =========================================================
+   패널 상단 라운드 보강 (탭 없는 단일 패널용)
+   ========================================================= */
+
+.vacation-panel .panel-body {
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+/* =========================================================
+   휴가 이력 테이블 컬럼 폭 / 정렬
+   ========================================================= */
+
+.vacation-table th.col-period,
+.vacation-table td.cell-period {
+  width: 26%;
+}
+
+.vacation-table th.col-type,
+.vacation-table td.cell-type {
+  width: 14%;
+}
+
+.vacation-table th.col-reason,
+.vacation-table td.cell-reason {
+  width: 40%;
+  padding-left: 120px;
+}
+
+.vacation-table th.col-status,
+.vacation-table td.cell-status {
+  width: 20%;
+  padding-right: 32px;
+}
+
+/* =========================================================
+   휴가 종류 Pill
+   ========================================================= */
+
+.vacation-type-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 52px;
+  height: 24px;
+  padding: 0 10px;
+
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #cad5e2;
+  color: #030213;
+}
+
+/* =========================================================
+   승인 현황 뱃지 (APPROVED / PENDING / REJECTED)
+   ========================================================= */
+
+.approval-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 60px;
+  height: 24px;
+  padding: 0 12px;
+
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* 진행중: #dbeafe / #1C398E */
+.approval-pending {
+  background: #dbeafe;
+  color: #1c398e;
+}
+
+/* 승인: #d1fae5 / #0D542B */
+.approval-approved {
+  background: #d1fae5;
+  color: #0d542b;
+}
+
+/* 반려: #fee2e2 / #82181A */
+.approval-rejected {
+  background: #fee2e2;
+  color: #82181a;
+}

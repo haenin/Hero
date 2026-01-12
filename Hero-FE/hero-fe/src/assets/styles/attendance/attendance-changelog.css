@@ -1,0 +1,58 @@
+/**
+ * <pre>
+ * File Name   : attendance-changelog.css
+ * Description : 근무제 변경 이력(ChangeLog) 테이블 전용 스타일
+ *               - 헤더/바디 컬럼 정렬
+ *               - 근무제명 컬럼 강조 색상
+ *
+ * History
+ *   2026/01/06 (이지윤) 근무제 변경 이력 화면 정렬/강조 스타일 분리
+ * </pre>
+ *
+ * @author 이지윤
+ * @version 1.0
+ */
+
+/* =========================
+   테이블 헤더 정렬
+   ========================= */
+
+/* 근무제명 컬럼 헤더 정렬 (본문과 패딩 맞춤) */
+.attendance-table th.col-worksystem {
+  padding-left: 100px;
+  /* td.worksystem-name 과 동일하게 정렬 */
+}
+
+/* 시간 컬럼 헤더 정렬 (중앙 정렬 + 좌측 여백) */
+.attendance-table th.col-time {
+  text-align: center;
+  padding-left: 10px;
+  /* td.time-cell 과 동일하게 정렬 */
+}
+
+/* 사유 컬럼 헤더 정렬 */
+.attendance-table th.col-reason {
+  padding-left: 48px;
+  /* td.reason-cell 과 동일하게 정렬 */
+}
+
+/* =========================
+   테이블 바디 셀 정렬/강조
+   ========================= */
+
+/* 시간 셀 중앙 정렬 */
+.attendance-table td.time-cell {
+  text-align: center;
+  padding-left: 10px;
+}
+
+/* 근무제명 컬럼 강조 색상 + 정렬 */
+.attendance-table td.worksystem-name {
+  padding-left: 100px;
+  color: #82181a;
+}
+
+/* 사유 컬럼 좌측 여백 */
+.attendance-table td.reason-cell {
+  padding-left: 48px;
+}
