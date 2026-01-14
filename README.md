@@ -52,9 +52,8 @@ HERO는 **프론트엔드**와 **백엔드**, **AI**가 분리된 구조로 개�
 #### 🖥️ 프론트엔드 레포지토리 : [GitHub - HERO Frontend](https://github.com/final-c4/Hero-FE)  
 #### 🛠️ 백엔드 레포지토리 : [GitHub - HERO Backend](https://github.com/final-c4/Hero-BE)  
 #### 🤖 AI 레포지토리 : [GitHub - HERO AI](https://github.com/final-c4/Hero-AI)  
-
+#### 🌐 실제 배포 사이트 : 🔗 [hero-hr.site](https://hero-hr.site)
 <br>
-
 
 ---
 
