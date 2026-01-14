@@ -386,3 +386,14 @@ HERO는 **프론트엔드**와 **백엔드**, **AI**가 분리된 구조로 개�
 - WebSocket과 이벤트 기반 아키텍처를 활용한 실시간 통신 구현 방법
 - AWS 클라우드 인프라(Elastic Beanstalk, RDS) 설계 및 운영 경험
 - 배포 환경에서 발생하는 다양한 이슈(CORS, 타임존, DB 연결) 트러블슈팅 능력 향상
+
+<hr style="margin: 40px 0;">
+
+<div align="center">
+
+ **🦸 HERO** - 보이는 인사관리, 통합 HR 대시보드
+
+Made by  Team C4
+
+</div>
+
