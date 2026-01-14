@@ -58,88 +58,101 @@ HERO는 **프론트엔드**와 **백엔드**, **AI**가 분리된 구조로 개�
 
 ---
 
-🧭 HERO - 보이는 인사관리, 통합 HR 대시보드  
+## 🛠 기술 스택
 
-Made by 💡 Team C4
-## 📚 프로젝트 문서
+#### 🧩 Backend (Java)
+<img src="https://img.shields.io/badge/Java%2017-007396?style=flat-square&logo=openjdk&logoColor=white"/> <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white"/> <img src="https://img.shields.io/badge/Spring%20Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white"/> <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens"/> <img src="https://img.shields.io/badge/JPA-59666C?style=flat-square"/> <img src="https://img.shields.io/badge/MyBatis-000000?style=flat-square"/> <img src="https://img.shields.io/badge/WebSocket-4353FF?style=flat-square"/> <img src="https://img.shields.io/badge/Swagger-85EA2D?style=flat-square&logo=swagger&logoColor=black"/>
 
-🛠 기술 스택
+#### 🧩 Backend (Python)
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/> <img src="https://img.shields.io/badge/LangChain-000000?style=flat-square"/> <img src="https://img.shields.io/badge/OpenAI%20API-412991?style=flat-square&logo=openai&logoColor=white"/> <img src="https://img.shields.io/badge/RAG-4B5563?style=flat-square"/>
 
-### 🧩 Backend
-- Spring / Spring Boot
-- Spring Security
-- Spring Data JPA / Hibernate
-- JWT / Gradle  
-👉 [Backend 상세 보기](https://github.com/final-c4/Hero/wiki/03-Tech-Stack#backend)
+#### 🎨 Frontend
+<img src="https://img.shields.io/badge/Vue.js%203-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white"/> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/> <img src="https://img.shields.io/badge/Pinia-FFD859?style=flat-square"/> <img src="https://img.shields.io/badge/Vue%20Router-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white"/> <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white"/> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white"/>
 
-### 🎨 Frontend
-- Vue.js / JavaScript
-- Vuetify
-- Vue Router
-- Pinia
-- Axios  
-👉 [Frontend 상세 보기](https://github.com/final-c4/Hero/wiki/03-Tech-Stack#frontend)
+#### 🗄 Database
+<img src="https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white"/> <img src="https://img.shields.io/badge/Amazon%20RDS-527FFF?style=flat-square&logo=amazonrds&logoColor=white"/>
 
-### 🗄 Database / Infra
-- MariaDB
-- Redis
-- AWS
-- Amazon S3  
-👉 [DB / Infra 상세 보기](https://github.com/final-c4/Hero/wiki/03-Tech-Stack#database--infra)
+#### ☁️ Infrastructure
+<img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white"/> <img src="https://img.shields.io/badge/EC2-FF9900?style=flat-square&logo=amazonec2&logoColor=white"/> <img src="https://img.shields.io/badge/S3-569A31?style=flat-square&logo=amazons3&logoColor=white"/> <img src="https://img.shields.io/badge/IAM-DD344C?style=flat-square&logo=amazonaws&logoColor=white"/> <img src="https://img.shields.io/badge/Elastic%20Beanstalk-FF9900?style=flat-square&logo=amazonaws&logoColor=white"/> <img src="https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white"/> <img src="https://img.shields.io/badge/Route%2053-8C4FFF?style=flat-square&logo=amazonaws&logoColor=white"/> <img src="https://img.shields.io/badge/ALB-FF9900?style=flat-square"/>
 
-### 🧰 Tools
-- Git / GitHub
-- Figma
-- Postman
-- Discord  
-👉 [협업 도구 상세 보기](https://github.com/final-c4/Hero/wiki/03-Tech-Stack#tools)
+#### 🔄 CI / CD
+<img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white"/>
 
+#### 🧰 Tools
+<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/> <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white"/> <img src="https://img.shields.io/badge/Notion-000000?style=flat-square&logo=notion&logoColor=white"/> <img src="https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white"/>
 
----
-🌐 외부 API 및 주요 구현 기술
+<br>
 
-| 구분 | 기술 / API | 설명 |
-|---|---|---|
-| 실시간 알림 | SSE (Server-Sent Events) | 근태·결재 등 주요 이벤트 실시간 알림 |
-| 인증 | JWT | 사용자 인증 및 권한 관리 |
-| 배포 환경 | AWS | 서비스 배포 및 인프라 운영 |
-| 정적 파일 | Amazon S3 | 이미지 및 정적 리소스 업로드 |
-
-👉 [외부 API 상세 보기](https://github.com/final-c4/Hero/wiki/10-API-Spec)
-
----
+--- 
 
 ## 📚 프로젝트 문서
 
+### 🗂 프로젝트 기획
 
 <details>
-<summary>🗂 프로젝트 기획</summary>
+<summary>📄 프로젝트 소개</summary>
 
-- 📄 [프로젝트 소개](https://github.com/final-c4/Hero/wiki/01-Project-Overview)
-- 📄 [요구사항 명세서](https://github.com/final-c4/Hero/wiki/06-Requirements)
-- 📄 [WBS](https://github.com/final-c4/Hero/wiki/05-WBS)
+- [프로젝트 개요](https://github.com/final-c4/Hero/wiki/01-Project-Overview)
+
+</details>
+
+<details>
+<summary>📝 요구사항 명세서</summary>
+
+- [요구사항 명세서](https://github.com/final-c4/Hero/wiki/06-Requirements)
+
+</details>
+
+<details>
+<summary>🗓️ WBS</summary>
+
+- [WBS](https://github.com/final-c4/Hero/wiki/05-WBS)
 
 </details>
 
 ---
 
-<details>
-<summary>🗂 프로젝트 설계</summary>
 
-- 🧩 [DDD](https://github.com/final-c4/Hero/wiki/07-DDD)
-- 🗄️ [ERD](https://github.com/final-c4/Hero/wiki/08-ERD)
-- 🖥️ [화면 설계서 / Wireframe](https://github.com/final-c4/Hero/wiki/09-Wireframe)
-- 🕹️ [시스템 아키텍처](https://github.com/final-c4/Hero/wiki/04-System-Architecture)
+### 🗂 프로젝트 설계
+
+<details>
+<summary>🧩 DDD</summary>
+
+- [DDD 설계](https://github.com/final-c4/Hero/wiki/07-DDD)
 
 </details>
 
----
+<details>
+<summary>🗄️ ERD</summary>
+
+- [ERD](https://github.com/final-c4/Hero/wiki/08-ERD)
+
+</details>
 
 <details>
-<summary>🔄 CI / CD & 테스트</summary>
+<summary>🖥️ 화면 설계서 / Wireframe</summary>
 
-- 🔁 [CI / CD 계획서](https://github.com/final-c4/Hero/wiki/13-CI-CD)
-- 🧪 [단위 테스트](https://github.com/final-c4/Hero/wiki/11-Unit-Tests)
-- 🎨 [UI / UX 테스트](https://github.com/final-c4/Hero/wiki/12-UI-UX-Tests)
+- [Wireframe](https://github.com/final-c4/Hero/wiki/09-Wireframe)
 
+</details>
+
+<details>
+<summary>🕹️ 시스템 아키텍처</summary>
+
+- [시스템 아키텍처](https://github.com/final-c4/Hero/wiki/04-System-Architecture)
+
+</details>
+
+<details>
+<summary> 🔁 CI / CD</summary>
+  
+- [CI / CD](https://github.com/final-c4/Hero/wiki/13-CI-CD)
+
+</details>
+
+<details>
+<summary>🧪 테스트 결과서 </summary>
+  
+- [단위 테스트](https://github.com/final-c4/Hero/wiki/11-Unit-Tests)
+- [UI / UX 테스트](https://github.com/final-c4/Hero/wiki/12-UI-UX-Tests)
 </details>
