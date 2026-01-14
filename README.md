@@ -61,23 +61,85 @@ HERO는 **프론트엔드**와 **백엔드**, **AI**가 분리된 구조로 개�
 🧭 HERO - 보이는 인사관리, 통합 HR 대시보드  
 
 Made by 💡 Team C4
+## 📚 프로젝트 문서
 
-### 🔗 Documentation (Wiki)
-상세 문서는 Wiki에서 관리합니다.
+🛠 기술 스택
 
-- [Wiki Home](../../wiki)
-- [프로젝트 소개](../../wiki/01-Project-Overview)
-- [주요 기능](../../wiki/02-Key-Features)
-- [기술 스택](../../wiki/03-Tech-Stack)
-- [시스템 아키텍처](../../wiki/04-System-Architecture)
-- [WBS](../../wiki/05-WBS)
-- [요구사항 명세서](../../wiki/06-Requirements)
-- [DDD](../../wiki/07-DDD)
-- [ERD](../../wiki/08-ERD)
-- [Wireframe](../../wiki/09-Wireframe)
-- [API 명세서](../../wiki/10-API-Spec)
-- [단위 테스트](../../wiki/11-Unit-Tests)
-- [UI/UX 테스트](../../wiki/12-UI-UX-Tests)
-- [CI/CD 계획서](../../wiki/13-CI-CD)
-- [프로젝트 회고](../../wiki/14-Retrospective)
-- [팀 소개](../../wiki/15-Team)
+### 🧩 Backend
+- Spring / Spring Boot
+- Spring Security
+- Spring Data JPA / Hibernate
+- JWT / Gradle  
+👉 [Backend 상세 보기](https://github.com/final-c4/Hero/wiki/03-Tech-Stack#backend)
+
+### 🎨 Frontend
+- Vue.js / JavaScript
+- Vuetify
+- Vue Router
+- Pinia
+- Axios  
+👉 [Frontend 상세 보기](https://github.com/final-c4/Hero/wiki/03-Tech-Stack#frontend)
+
+### 🗄 Database / Infra
+- MariaDB
+- Redis
+- AWS
+- Amazon S3  
+👉 [DB / Infra 상세 보기](https://github.com/final-c4/Hero/wiki/03-Tech-Stack#database--infra)
+
+### 🧰 Tools
+- Git / GitHub
+- Figma
+- Postman
+- Discord  
+👉 [협업 도구 상세 보기](https://github.com/final-c4/Hero/wiki/03-Tech-Stack#tools)
+
+
+---
+🌐 외부 API 및 주요 구현 기술
+
+| 구분 | 기술 / API | 설명 |
+|---|---|---|
+| 실시간 알림 | SSE (Server-Sent Events) | 근태·결재 등 주요 이벤트 실시간 알림 |
+| 인증 | JWT | 사용자 인증 및 권한 관리 |
+| 배포 환경 | AWS | 서비스 배포 및 인프라 운영 |
+| 정적 파일 | Amazon S3 | 이미지 및 정적 리소스 업로드 |
+
+👉 [외부 API 상세 보기](https://github.com/final-c4/Hero/wiki/10-API-Spec)
+
+---
+
+## 📚 프로젝트 문서
+
+
+<details>
+<summary>🗂 프로젝트 기획</summary>
+
+- 📄 [프로젝트 소개](https://github.com/final-c4/Hero/wiki/01-Project-Overview)
+- 📄 [요구사항 명세서](https://github.com/final-c4/Hero/wiki/06-Requirements)
+- 📄 [WBS](https://github.com/final-c4/Hero/wiki/05-WBS)
+
+</details>
+
+---
+
+<details>
+<summary>🗂 프로젝트 설계</summary>
+
+- 🧩 [DDD](https://github.com/final-c4/Hero/wiki/07-DDD)
+- 🗄️ [ERD](https://github.com/final-c4/Hero/wiki/08-ERD)
+- 🖥️ [화면 설계서 / Wireframe](https://github.com/final-c4/Hero/wiki/09-Wireframe)
+- 🕹️ [시스템 아키텍처](https://github.com/final-c4/Hero/wiki/04-System-Architecture)
+
+</details>
+
+---
+
+<details>
+<summary>🔄 CI / CD & 테스트</summary>
+
+- 🔁 [CI / CD 계획서](https://github.com/final-c4/Hero/wiki/13-CI-CD)
+- 🧪 [단위 테스트](https://github.com/final-c4/Hero/wiki/11-Unit-Tests)
+- 🎨 [UI / UX 테스트](https://github.com/final-c4/Hero/wiki/12-UI-UX-Tests)
+
+</details>
