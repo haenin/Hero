@@ -58,7 +58,7 @@ HERO는 **프론트엔드**와 **백엔드**, **AI**가 분리된 구조로 개�
 
 ---
 
-## 🛠 기술 스택
+### 🛠 기술 스택
 
 #### 🧩 Backend (Java)
 <img src="https://img.shields.io/badge/Java%2017-007396?style=flat-square&logo=openjdk&logoColor=white"/> <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white"/> <img src="https://img.shields.io/badge/Spring%20Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white"/> <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens"/> <img src="https://img.shields.io/badge/JPA-59666C?style=flat-square"/> <img src="https://img.shields.io/badge/MyBatis-000000?style=flat-square"/> <img src="https://img.shields.io/badge/WebSocket-4353FF?style=flat-square"/> <img src="https://img.shields.io/badge/Swagger-85EA2D?style=flat-square&logo=swagger&logoColor=black"/>
@@ -85,9 +85,9 @@ HERO는 **프론트엔드**와 **백엔드**, **AI**가 분리된 구조로 개�
 
 --- 
 
-## 📚 프로젝트 문서
+### 📚 프로젝트 문서
 
-### 🗂 프로젝트 기획
+#### 🗂 프로젝트 기획
 
 <details>
 <summary>📄 프로젝트 소개</summary>
@@ -113,7 +113,7 @@ HERO는 **프론트엔드**와 **백엔드**, **AI**가 분리된 구조로 개�
 ---
 
 
-### 🗂 프로젝트 설계
+#### 🗂 프로젝트 설계
 
 <details>
 <summary>🧩 DDD</summary>
@@ -161,7 +161,7 @@ HERO는 **프론트엔드**와 **백엔드**, **AI**가 분리된 구조로 개�
 
 ---
 
-## 팀원별 회고 모음
+### 팀원별 회고 모음
 
 <br>
 <div align="center">
