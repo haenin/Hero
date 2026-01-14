@@ -11,7 +11,7 @@
 
 --- 
 
-### ℹ️ 기획 배경 및 문제 정의
+## ℹ️ 기획 배경 및 문제 정의
 
 #### 소비자 Pain Point  
 > "인사 데이터가 여기저기 흩어져 있어요."  "현황을 보려면 여러 화면을 눌러야 해요."  "결재나 근태 변경 알림을 놓치기 쉬워요."
@@ -27,7 +27,7 @@
 
 ---
 
-### ✅ HERO의 서비스 방향성
+## ✅ HERO의 서비스 방향성
 
 - **📊 HR 통합 대시보드**: 근태·급여·평가 데이터를 시각화하여 한 화면에서 제공  
 
@@ -42,7 +42,7 @@
 
 ---
 
-### 🚀 프로젝트 이동
+## 🚀 프로젝트 이동
 
 HERO는 **프론트엔드**와 **백엔드**, **AI**가 분리된 구조로 개발되었습니다.  
 아래 링크를 통해 각 레포지토리 및 배포 환경을 확인할 수 있습니다.
@@ -58,7 +58,7 @@ HERO는 **프론트엔드**와 **백엔드**, **AI**가 분리된 구조로 개�
 
 ---
 
-### 🛠 기술 스택
+## 🛠 기술 스택
 
 #### 🧩 Backend (Java)
 <img src="https://img.shields.io/badge/Java%2017-007396?style=flat-square&logo=openjdk&logoColor=white"/> <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white"/> <img src="https://img.shields.io/badge/Spring%20Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white"/> <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens"/> <img src="https://img.shields.io/badge/JPA-59666C?style=flat-square"/> <img src="https://img.shields.io/badge/MyBatis-000000?style=flat-square"/> <img src="https://img.shields.io/badge/WebSocket-4353FF?style=flat-square"/> <img src="https://img.shields.io/badge/Swagger-85EA2D?style=flat-square&logo=swagger&logoColor=black"/>
@@ -85,9 +85,9 @@ HERO는 **프론트엔드**와 **백엔드**, **AI**가 분리된 구조로 개�
 
 --- 
 
-### 📚 프로젝트 문서
+## 📚 프로젝트 문서
 
-#### 🗂 프로젝트 기획
+### 🗂 프로젝트 기획
 
 <details>
 <summary>📄 프로젝트 소개</summary>
@@ -113,7 +113,7 @@ HERO는 **프론트엔드**와 **백엔드**, **AI**가 분리된 구조로 개�
 ---
 
 
-#### 🗂 프로젝트 설계
+### 🗂 프로젝트 설계
 
 <details>
 <summary>🧩 DDD</summary>
@@ -161,7 +161,7 @@ HERO는 **프론트엔드**와 **백엔드**, **AI**가 분리된 구조로 개�
 
 ---
 
-### 팀원별 회고 모음
+## 🙆🏻‍♀️ 팀원별 회고 모음
 
 <br>
 <div align="center">
